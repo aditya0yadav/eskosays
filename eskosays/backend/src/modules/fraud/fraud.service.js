@@ -1,6 +1,7 @@
 const { Op } = require('sequelize');
 const { FingerprintServerApiClient, Region } = require('@fingerprint/node-sdk');
 const axios = require('axios');
+const { fetch } = require('undici');
 
 const redis = require('../../config/redis');
 const SurveyVisit = require('../../models/fraud/SurveyVisit.model');
@@ -9,7 +10,8 @@ const SurveyFraudFlag = require('../../models/fraud/SurveyFraudFlag.model');
 // Fingerprint Pro Server API Client
 const client = new FingerprintServerApiClient({
     apiKey: process.env.FINGERPRINT_SECRET_API_KEY || "W3rPw26FTMLdBYH9GPls",
-    region: Region.Global // Matches the 'ap' region used in the frontend
+    region: Region.Global, // Matches the 'ap' region used in the frontend
+    fetch // Provide a Node-compatible fetch implementation (undici)
 });
 
 // ─── Redis TTL: 7 days ────────────────────────────────────────────────────────

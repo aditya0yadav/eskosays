@@ -14,6 +14,7 @@
   "dependencies": {
     "@fingerprint/node-sdk": "^7.1.0",
     "axios": "^1.13.5",
+    "undici": "^6.3.0",
     "bcryptjs": "^3.0.3",
     "bullmq": "^5.68.0",
     "compression": "^1.8.1",
