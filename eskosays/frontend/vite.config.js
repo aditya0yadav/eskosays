@@ -16,6 +16,8 @@ export default defineConfig({
     },
     build: {
         outDir: 'build',
-        emptyOutDir: true
+        // Avoid Vite attempting to remove files in `build/` on hosts
+        // where files may be owned by the system (prevents EPERM).
+        emptyOutDir: false
     }
 })
