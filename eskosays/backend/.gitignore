@@ -7,4 +7,5 @@ dist
 firebase-service-account.json
 dev.sqlite
 database.js
+!src/config/database.js
 survey-cache.json 
