@@ -1,0 +1,10 @@
+id,user_id,first_name,last_name,country_code,status,quality_score,balance,lifetime_earnings,profile_picture,created_at,pending_bonus,completions_count,bio,city,zip_code,timezone,country
+e338c3c5-a9b8-47f1-a8df-ce8704206aaf,7d46d416-8937-4329-a57b-ad4c23c9624e,Prod,Test,,on_boarding,0,0,0,,"2026-02-15 04:48:29.045 +00:00",5,0,,,,,
+2036b895-4244-44fd-93ed-6a7e5ba6938f,51e7d4f4-8241-4671-9235-e741165004ad,User,"",,on_boarding,0,0,0,,"2026-02-15 18:03:06.079 +00:00",5,0,,,,,
+91a593f0-034e-4faf-bf65-d4365def06de,c5342248-df36-473a-bb96-3b671a58a8f1,User,"",,on_boarding,0,0,0,,"2026-02-16 20:59:35.874 +00:00",5,0,,,,,
+11e7c2a7-b160-48f2-a24c-2b1065b6b0ce,bf67dc4f-41df-44eb-85e3-7224aedd9b6e,User,"",,on_boarding,0,0,0,,"2026-02-18 14:40:58.092 +00:00",5,0,,,,,
+790d0fd1-3711-4963-88c2-873c04680703,7955addc-1e10-4918-858a-6218e155cb5b,"Aditya Yadav","",,active,100,14.4,14.4,,"2026-02-19 06:52:21.545 +00:00",5,2,"","","","",""
+c89b9810-3602-45c6-abb9-18173a096fe0,e7c424f6-4ea1-4039-9a74-115221c1b108,User,"",,on_boarding,0,0,0,,"2026-02-20 18:28:24.049 +00:00",5,0,,,,,
+688d934c-b7b0-4be6-8002-826235774b0e,14ccd0fe-883f-487a-90de-be54843419ba,Aditya,Yadav,,on_boarding,0,0,0,,"2026-02-20 19:26:59.344 +00:00",5,0,"this is a good idea","","","",""
+25df0b1d-4a3b-4ca8-be1f-67ccdddf4e78,0d29502b-5bae-4369-82ba-ec4128d3fbab,User,"",,on_boarding,0,0,0,,"2026-02-20 20:36:12.016 +00:00",5,0,,,,,
+92a255a7-ad5a-4018-865d-6f3704e10c9f,d5ac9ab0-e463-482f-ab59-b591f7ee6849,User,"",,on_boarding,0,0,0,,"2026-02-20 20:44:25.970 +00:00",5,0,,,,,

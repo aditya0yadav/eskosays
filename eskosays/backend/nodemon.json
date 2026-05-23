@@ -1,0 +1,8 @@
+{
+    "ignore": [
+        "survey-cache.json",
+        "database/*.sqlite",
+        "node_modules/*"
+    ],
+    "delay": "1000"
+}

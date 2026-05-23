@@ -1,0 +1,10 @@
+node_modules
+.env
+.DS_Store
+coverage
+dist
+*-cred.json
+firebase-service-account.json
+dev.sqlite
+database.js
+survey-cache.json 
