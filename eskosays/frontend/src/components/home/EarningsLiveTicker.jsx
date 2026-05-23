@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 
 // ── Static dataset — 30 real-feeling panelists ───────────────────────────────
 const PANELISTS = [
-    { name: 'Priya S.', city: 'Mumbai', avatar: '#5B6CFF' },
+    { name: 'Priya S.', city: 'Mumbai', avatar: '#0022FF' },
     { name: 'Rahul K.', city: 'Delhi', avatar: '#4FD1E8' },
     { name: 'Anita M.', city: 'Bangalore', avatar: '#f59e0b' },
     { name: 'James T.', city: 'London', avatar: '#22c55e' },
@@ -74,7 +74,7 @@ const EarningsLiveTicker = () => {
         <section className="w-full bg-[#0F1E3A] py-10 sm:py-14 relative overflow-hidden">
             {/* Subtle bg glow */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#5B6CFF]/10 rounded-full blur-[120px]" />
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#0022FF]/10 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4FD1E8]/8 rounded-full blur-[100px]" />
             </div>
 
@@ -92,7 +92,7 @@ const EarningsLiveTicker = () => {
                             <span className="text-emerald-400 text-xs font-black uppercase tracking-widest">Live Activity</span>
                         </div>
                         <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                            Real <span className="text-emerald-400">payouts</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5B6CFF] to-[#4FD1E8]">real people</span> — right now
+                            Real <span className="text-emerald-400">payouts</span>, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0022FF] to-[#4FD1E8]">real people</span> — right now
                         </h2>
                     </div>
                     <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2">

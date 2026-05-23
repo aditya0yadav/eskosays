@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
                         <p className="text-[#0F1E3A]/70">
                             If you have concerns about your privacy or data usage, please reach out to:
                         </p>
-                        <p className="font-semibold text-[#5B6CFF] mt-2">privacy@eskosays.com</p>
+                        <p className="font-semibold text-[#0022FF] mt-2">privacy@eskosays.com</p>
                     </section>
                 </div>
             </div>

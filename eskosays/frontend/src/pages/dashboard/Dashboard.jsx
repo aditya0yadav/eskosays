@@ -48,7 +48,8 @@ const Dashboard = () => {
     };
 
     return (
-        <div className="h-screen bg-slate-50 text-slate-900 flex overflow-hidden font-display transition-colors duration-500">
+        <div className="h-screen text-slate-900 flex overflow-hidden font-display transition-colors duration-500"
+            style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #F0F3FF 100%)' }}>
             {showProfileModal && <ProfileCompletionModal onClose={() => setShowProfileModal(false)} />}
 
             {/* Sidebar Component */}
@@ -95,7 +96,8 @@ const Dashboard = () => {
 const MobileNavLink = ({ icon, active, onClick }) => (
     <button
         onClick={onClick}
-        className={`relative flex-1 py-1 flex flex-col items-center justify-center transition-all ${active ? 'text-indigo-400' : 'text-white/40'}`}
+        className={`relative flex-1 py-1 flex flex-col items-center justify-center transition-all ${active ? '' : 'text-white/40'}`}
+        style={active ? { color: '#4FD1E8' } : {}}
     >
         <div className="relative z-10">
             {React.cloneElement(icon, { size: 24, strokeWidth: active ? 2.5 : 2 })}
@@ -103,7 +105,8 @@ const MobileNavLink = ({ icon, active, onClick }) => (
         {active && (
             <motion.div
                 layoutId="mobileActiveIndicator_premium"
-                className="absolute -bottom-2 w-1.5 h-1.5 bg-indigo-400 rounded-full shadow-[0_0_10px_rgba(129,140,248,0.8)]"
+                className="absolute -bottom-2 w-1.5 h-1.5 rounded-full shadow-[0_0_10px_rgba(79,209,232,0.8)]"
+                style={{ background: '#4FD1E8' }}
             />
         )}
     </button>

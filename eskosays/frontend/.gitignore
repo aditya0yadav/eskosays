@@ -6,3 +6,4 @@ dist
 dev.sqlite
 database.js
 survey-cache.json 
+build

@@ -11,7 +11,7 @@ import {
     ChevronRight
 } from 'lucide-react';
 import { getAssetUrl } from '../../services/api';
-import logo from '../../assets/logo.png';
+import footerLogo from '../../assets/logo foot.png';
 
 const Sidebar = ({ activeTab, setActiveTab, user, logout }) => {
     return (
@@ -24,11 +24,14 @@ const Sidebar = ({ activeTab, setActiveTab, user, logout }) => {
             </div>
 
             {/* Logo Section */}
-            <div className="p-8 pb-4 relative z-10">
-                <div className="flex items-center gap-3 group cursor-pointer" onClick={() => setActiveTab('home')}>
-                        <div className="transition-all duration-500 group-hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.3)] flex items-center">
-                        <img src={logo} alt="Eskosays" className="h-14 w-auto" />
-                        <span className="hidden xl:inline-block ml-3 text-black font-bold text-lg">Eskosays</span>
+            <div className="p-6 pb-4 relative z-10">
+                <div className="flex items-center group cursor-pointer" onClick={() => setActiveTab('home')}>
+                    <div className="transition-all duration-500 group-hover:drop-shadow-[0_0_10px_rgba(99,102,241,0.3)] flex items-center justify-center w-full xl:justify-start">
+                        <img 
+                            src={footerLogo} 
+                            alt="Eskosays" 
+                            className="h-8 w-8 object-cover object-left xl:w-auto xl:h-9 xl:object-contain" 
+                        />
                     </div>
                 </div>
             </div>

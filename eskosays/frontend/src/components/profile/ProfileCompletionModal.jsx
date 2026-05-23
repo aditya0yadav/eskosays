@@ -376,7 +376,7 @@ const ProfileCompletionModal = ({ onClose }) => {
                     exit={{ scale: 0, opacity: 0, y: 50 }}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="fixed bottom-28 right-6 z-[100] w-14 h-14 bg-[#5B6CFF] rounded-2xl shadow-[0_8px_30px_rgba(91,108,255,0.3)] flex items-center justify-center text-white cursor-pointer border-2 border-white/50"
+                    className="fixed bottom-28 right-6 z-[100] w-14 h-14 bg-[#0022FF] rounded-2xl shadow-[0_8px_30px_rgba(91,108,255,0.3)] flex items-center justify-center text-white cursor-pointer border-2 border-white/50"
                 >
                     <DollarSign className="w-7 h-7" strokeWidth={2.5} />
                     <span className="absolute -top-1.5 -right-1.5 flex h-4 w-4">
@@ -419,7 +419,7 @@ const ProfileCompletionModal = ({ onClose }) => {
                                                 Profile Enhancement
                                             </p>
                                         </div>
-                                        <div className="bg-[#5B6CFF]/10 text-[#5B6CFF] text-[10px] font-black px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                                        <div className="bg-[#0022FF]/10 text-[#0022FF] text-[10px] font-black px-3 py-1.5 rounded-full flex items-center gap-1.5">
                                             <MousePointer2 className="w-3 h-3 fill-current" />
                                             <span>EARN PREMIUM</span>
                                         </div>
@@ -427,7 +427,7 @@ const ProfileCompletionModal = ({ onClose }) => {
 
                                     <h2 className="text-5xl font-display font-black leading-[0.95] tracking-tight text-[#0F1E3A] mb-8">
                                         Unlock high <br />
-                                        <span className="text-[#5B6CFF]">paying</span> tasks.
+                                        <span className="text-[#0022FF]">paying</span> tasks.
                                     </h2>
 
                                     <p className="text-slate-500 font-medium mb-10 leading-relaxed max-w-[320px]">

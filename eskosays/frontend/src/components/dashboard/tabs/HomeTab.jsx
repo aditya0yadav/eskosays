@@ -246,7 +246,7 @@ const HomeTab = () => {
                             <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
                                 <div className="flex justify-between items-center mb-6">
                                     <h3 className="font-bold text-slate-900">Recent Activity</h3>
-                                    <button className="text-sm text-[#5B6CFF] font-medium hover:underline">View All</button>
+                                    <button className="text-sm text-[#0022FF] font-medium hover:underline">View All</button>
                                 </div>
                                 <div className="space-y-4">
                                     {stats?.recent_activities?.length > 0 ? (

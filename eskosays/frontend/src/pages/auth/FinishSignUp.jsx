@@ -87,7 +87,7 @@ const FinishSignUp = () => {
         return (
             <div className="min-h-screen flex items-center justify-center bg-white">
                 <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#5B6CFF] to-[#4FD1E8] rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#0022FF] to-[#4FD1E8] rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                         <RefreshCw className="w-8 h-8 text-white animate-spin" />
                     </div>
                     <h2 className="text-xl font-bold text-[#0F1E3A]">Verifying your email…</h2>
@@ -126,14 +126,14 @@ const FinishSignUp = () => {
                         <input
                             type="email"
                             placeholder="Your email address"
-                            className="w-full h-14 px-4 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#5B6CFF]/20 focus:bg-white transition-all text-center"
+                            className="w-full h-14 px-4 bg-gray-50 border border-gray-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#0022FF]/20 focus:bg-white transition-all text-center"
                             value={manualEmail}
                             onChange={(e) => setManualEmail(e.target.value)}
                             required
                         />
                         <button
                             type="submit"
-                            className="w-full h-14 bg-gradient-to-r from-[#5B6CFF] to-[#4FD1E8] text-white font-bold rounded-2xl hover:shadow-lg transition-all"
+                            className="w-full h-14 bg-gradient-to-r from-[#0022FF] to-[#4FD1E8] text-white font-bold rounded-2xl hover:shadow-lg transition-all"
                         >
                             Confirm & Sign In
                         </button>
@@ -156,7 +156,7 @@ const FinishSignUp = () => {
                 </div>
                 <Link
                     to="/signup"
-                    className="block w-full h-12 bg-gradient-to-r from-[#5B6CFF] to-[#4FD1E8] text-white font-bold rounded-2xl hover:shadow-lg transition-all flex items-center justify-center"
+                    className="block w-full h-12 bg-gradient-to-r from-[#0022FF] to-[#4FD1E8] text-white font-bold rounded-2xl hover:shadow-lg transition-all flex items-center justify-center"
                 >
                     Back to Sign Up
                 </Link>

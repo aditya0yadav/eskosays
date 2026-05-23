@@ -39,7 +39,7 @@ const FAQ = () => {
     );
 
     return (
-        <div className="min-h-screen bg-white flex flex-col font-sans">
+        <div className="min-h-screen flex flex-col font-sans canvas-gradient">
 
             {/* ── Editorial Header & Layout ─────────────────────────────────── */}
             <section className="px-4 sm:px-[5%] pt-28 pb-32 lg:pt-36 max-w-[1200px] mx-auto w-full flex flex-col lg:flex-row gap-16 lg:gap-24">
@@ -48,8 +48,8 @@ const FAQ = () => {
                 <div className="flex-1 lg:max-w-[40%] lg:sticky lg:top-36 self-start">
                     {/* Eyebrow */}
                     <div className="flex items-center gap-4 mb-8">
-                        <div className="h-px w-10 sm:w-16 bg-emerald-400" />
-                        <span className="text-emerald-500 font-bold text-xs uppercase tracking-[0.2em] font-mono">
+                        <div className="h-px w-10 sm:w-16" style={{ background: '#0022FF' }} />
+                        <span className="font-bold text-xs uppercase tracking-[0.2em] font-mono" style={{ color: '#0022FF' }}>
                             Support Center
                         </span>
                     </div>
@@ -70,9 +70,12 @@ const FAQ = () => {
                             placeholder="Search for answers..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full h-14 pl-12 pr-6 rounded-full border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:border-emerald-400 focus:ring-4 focus:ring-emerald-400/10 text-slate-700 font-medium transition-all"
+                            className="w-full h-14 pl-12 pr-6 rounded-full border bg-white focus:bg-white focus:outline-none text-slate-700 font-medium transition-all"
+                            onFocus={e => e.currentTarget.style.boxShadow = '0 0 0 3px rgba(0,34,255,0.12)'}
+                            onBlur={e => e.currentTarget.style.boxShadow = ''}
+                            style={{ border: '1px solid rgba(0,34,255,0.15)' }}
                         />
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-emerald-500 transition-colors" />
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-[#0022FF] transition-colors" />
                     </div>
                 </div>
 
@@ -92,12 +95,14 @@ const FAQ = () => {
                                             onClick={() => setOpenIndex(isOpen ? -1 : index)}
                                             className="w-full flex justify-between items-start gap-6 text-left"
                                         >
-                                            <h3 className={`text-xl font-bold leading-tight transition-colors ${isOpen ? 'text-emerald-500' : 'text-[#0F1E3A] group-hover:text-emerald-500'
-                                                }`}>
+                                            <h3 className={`text-xl font-bold leading-tight transition-colors ${isOpen ? '' : 'text-[#0F1E3A] group-hover:opacity-80'}`}
+                                                style={isOpen ? { color: '#0022FF' } : {}}>
                                                 {faq.question}
                                             </h3>
-                                            <div className="flex-shrink-0 w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:border-emerald-200 transition-colors mt-0.5">
-                                                <ChevronDown className={`w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-transform duration-300 ${isOpen ? 'rotate-180 text-emerald-500' : ''}`} />
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-colors mt-0.5"
+                                                style={{ borderColor: isOpen ? 'rgba(0,34,255,0.3)' : 'rgba(0,0,0,0.1)' }}>
+                                                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+                                                    style={{ color: isOpen ? '#0022FF' : '#94a3b8' }} />
                                             </div>
                                         </button>
 
@@ -106,7 +111,8 @@ const FAQ = () => {
                                                 }`}
                                         >
                                             <div className="overflow-hidden">
-                                                <p className="text-lg text-slate-600 leading-relaxed pr-8 border-l-2 border-emerald-100 pl-6">
+                                                <p className="text-lg text-slate-600 leading-relaxed pr-8 border-l-2 pl-6"
+                                                    style={{ borderColor: 'rgba(0,34,255,0.2)' }}>
                                                     {faq.answer}
                                                 </p>
                                             </div>
@@ -118,14 +124,15 @@ const FAQ = () => {
                     )}
 
                     {/* Support Fallback */}
-                    <div className="mt-16 bg-slate-50 p-8 sm:p-10 rounded-[1.5rem] border border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div className="mt-16 p-8 sm:p-10 rounded-[1.5rem] flex flex-col sm:flex-row items-center justify-between gap-6 depth-card">
                         <div>
                             <h4 className="text-xl font-bold text-[#0F1E3A] mb-2">Still have questions?</h4>
                             <p className="text-slate-500 font-medium">Reach out directly to our support team.</p>
                         </div>
                         <a
                             href="mailto:support@eskosays.com"
-                            className="whitespace-nowrap inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-slate-200 text-[#0F1E3A] font-bold hover:border-[#0F1E3A] transition-colors shadow-sm"
+                            className="whitespace-nowrap inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white font-bold hover:shadow-md transition-all shadow-sm no-underline"
+                            style={{ border: '1px solid rgba(0,34,255,0.15)', color: '#0022FF' }}
                         >
                             email Support
                         </a>
@@ -135,7 +142,8 @@ const FAQ = () => {
             </section>
 
             {/* ── Architectural CTA (Consistent with AboutUs) ──────────────── */}
-            <section className="mt-auto bg-slate-900 border-t border-slate-800">
+            <section className="mt-auto border-t border-white/10"
+                style={{ background: 'linear-gradient(135deg, #0022FF 0%, #0F1E3A 100%)' }}>
                 <div className="max-w-[1200px] mx-auto px-4 sm:px-[5%] py-24 lg:py-32 flex flex-col md:flex-row items-center justify-between gap-12">
                     <div className="max-w-xl">
                         <h2 className="text-4xl sm:text-5xl font-black text-white leading-tight mb-4">
@@ -147,7 +155,8 @@ const FAQ = () => {
                     </div>
                     <Link
                         to="/signup"
-                        className="group relative inline-flex items-center justify-center gap-4 bg-emerald-500 text-white px-8 py-5 sm:px-10 sm:py-6 rounded-full text-lg sm:text-xl font-black shadow-2xl shadow-emerald-500/20 hover:bg-emerald-400 transition-all duration-300 flex-shrink-0"
+                        className="group relative inline-flex items-center justify-center gap-4 bg-white px-8 py-5 sm:px-10 sm:py-6 rounded-full text-lg sm:text-xl font-black shadow-2xl hover:bg-slate-50 transition-all duration-300 flex-shrink-0 no-underline"
+                        style={{ color: '#0022FF' }}
                     >
                         <span>Create your account</span>
                         <ArrowRight strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />

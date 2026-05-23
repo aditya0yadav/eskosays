@@ -55,7 +55,7 @@ const TermsOfService = () => {
                         <p className="text-[#0F1E3A]/70">
                             If you have any questions regarding these Terms of Service, please contact our support team at:
                         </p>
-                        <p className="font-semibold text-[#5B6CFF] mt-2">support@eskosays.com</p>
+                        <p className="font-semibold text-[#0022FF] mt-2">support@eskosays.com</p>
                     </section>
                 </div>
             </div>

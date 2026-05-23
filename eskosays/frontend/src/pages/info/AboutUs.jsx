@@ -4,16 +4,16 @@ import { Target, Users, Globe, ArrowRight, Quote } from 'lucide-react';
 
 const AboutUs = () => {
     return (
-        <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
+        <div className="min-h-screen flex flex-col font-sans canvas-gradient">
 
             {/* ── Editorial Hero ───────────────────────────────────────────── */}
-            <section className="relative px-4 sm:px-[5%] pt-28 pb-20 lg:pt-36 lg:pb-28 bg-white border-b border-slate-100">
+            <section className="relative px-4 sm:px-[5%] pt-28 pb-20 lg:pt-36 lg:pb-28" style={{ background: 'rgba(255,255,255,0.8)', borderBottom: '1px solid rgba(0,34,255,0.08)' }}>
                 <div className="max-w-[1000px] mx-auto relative z-10">
 
                     {/* Minimal Eyebrow */}
                     <div className="flex items-center gap-4 mb-8">
-                        <div className="h-px w-10 sm:w-16 bg-[#5B6CFF]" />
-                        <span className="text-[#5B6CFF] font-bold text-xs uppercase tracking-[0.2em] font-mono">
+                        <div className="h-px w-10 sm:w-16" style={{ background: '#0022FF' }} />
+                        <span className="font-bold text-xs uppercase tracking-[0.2em] font-mono" style={{ color: '#0022FF' }}>
                             Who We Are
                         </span>
                     </div>
@@ -50,7 +50,7 @@ const AboutUs = () => {
                             Grow your business. <br />
                             <span className="text-slate-400">Stand out.</span>
                         </h2>
-                        <div className="w-12 h-1 bg-[#5B6CFF] mb-8 rounded-full" />
+                        <div className="w-12 h-1 mb-8 rounded-full" style={{ background: '#0022FF' }} />
                         <p className="text-lg text-slate-600 leading-relaxed mb-6 font-medium">
                             Market research is the systematic gathering, recording, and analyzing of data and problems associated with products and services.
                         </p>
@@ -62,8 +62,8 @@ const AboutUs = () => {
                     {/* Right Context Block (Offset) */}
                     <div className="flex-1 mt-0 lg:mt-24 space-y-12">
                         {/* Clean minimal card */}
-                        <div className="bg-white p-8 sm:p-10 rounded-[1.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] border border-slate-100/50 group hover:-translate-y-1 transition-transform duration-500">
-                            <Target className="w-8 h-8 text-[#5B6CFF] mb-6 opacity-70 group-hover:opacity-100 transition-opacity" />
+                        <div className="bg-white p-8 sm:p-10 rounded-[1.5rem] border group hover:-translate-y-1 transition-transform duration-500 depth-card">
+                                <Target className="w-8 h-8 mb-6 opacity-70 group-hover:opacity-100 transition-opacity" style={{ color: '#0022FF' }} />
                             <p className="text-lg text-[#0F1E3A] leading-relaxed font-medium">
                                 Brands roll out surveys on the best paid survey sites. When you fill these questionnaires, your responses help the brands to refine their products—old and new.
                             </p>
@@ -112,7 +112,8 @@ const AboutUs = () => {
                             ))}
                         </div>
 
-                        <div className="mt-12 bg-[#0F1E3A] p-8 sm:p-10 rounded-[1.5rem] text-white">
+                        <div className="mt-12 p-8 sm:p-10 rounded-[1.5rem] text-white"
+                            style={{ background: 'linear-gradient(135deg, #0022FF 0%, #0F1E3A 100%)' }}>
                             <p className="text-xl font-medium leading-relaxed">
                                 Fill from anywhere, anytime, and make bucks. We connect your opinions with brands globally.
                             </p>
@@ -123,7 +124,8 @@ const AboutUs = () => {
             </section>
 
             {/* ── Architectural CTA ────────────────────────────────────────── */}
-            <section className="mt-auto bg-slate-900 border-t border-slate-800">
+            <section className="mt-auto border-t border-slate-800"
+                style={{ background: 'linear-gradient(135deg, #0022FF 0%, #0F1E3A 100%)' }}>
                 <div className="max-w-[1200px] mx-auto px-4 sm:px-[5%] py-24 lg:py-32 flex flex-col md:flex-row items-center justify-between gap-12">
 
                     <div className="max-w-xl">
@@ -137,7 +139,7 @@ const AboutUs = () => {
 
                     <Link
                         to="/signup"
-                        className="group relative inline-flex items-center justify-center gap-4 bg-white text-[#0F1E3A] px-8 py-5 sm:px-10 sm:py-6 rounded-full text-lg sm:text-xl font-black shadow-2xl hover:bg-slate-50 transition-all duration-300 flex-shrink-0"
+                        className="group relative inline-flex items-center justify-center gap-4 bg-white text-[#0022FF] px-8 py-5 sm:px-10 sm:py-6 rounded-full text-lg sm:text-xl font-black shadow-2xl hover:bg-slate-50 transition-all duration-300 flex-shrink-0 no-underline"
                     >
                         <span>Register Now</span>
                         <ArrowRight strokeWidth={3} className="group-hover:translate-x-1 transition-transform" />

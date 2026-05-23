@@ -77,7 +77,7 @@ const AdminLayout = () => {
                         <img
                             src={logo}
                             alt="Logo"
-                            className={`transition-all duration-300 object-contain object-left ${isSidebarOpen ? 'h-16 w-full' : 'h-10 w-10 mx-auto'}`}
+                            className={`transition-all duration-300 ${isSidebarOpen ? 'h-10 w-auto object-contain' : 'h-8 w-8 object-cover object-left mx-auto'}`}
                         />
                     </div>
                 </div>

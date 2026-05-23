@@ -7,16 +7,20 @@
 :root {
     --font-sans: 'Manrope', 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
     --font-display: 'Bricolage Grotesque', 'Outfit', sans-serif;
-    --brand-blue: #5B6CFF;
+    --brand-blue: #0022FF;
+    --brand-blue-soft: #1a3aff;
     --brand-cyan: #4FD1E8;
     --brand-navy: #0F1E3A;
+    --canvas-bg: linear-gradient(135deg, #FFFFFF 0%, #F5F7FA 100%);
 }
 
 body {
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    @apply bg-white text-[#0F1E3A] tracking-tight;
+    @apply text-[#0F1E3A] tracking-tight;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F5F7FA 100%);
+    background-attachment: fixed;
 }
 
 @layer utilities {
@@ -25,15 +29,47 @@ body {
     }
 
     .bg-brand-gradient {
-        @apply bg-gradient-to-r from-[#5B6CFF] to-[#4FD1E8];
+        background: linear-gradient(135deg, #0022FF 0%, #4FD1E8 100%);
     }
 
     .text-brand-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-[#5B6CFF] to-[#4FD1E8];
+        background: linear-gradient(135deg, #0022FF 0%, #4FD1E8 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     .font-display {
         font-family: var(--font-display);
+    }
+
+    /* Glassmorphism card utility — use site-wide */
+    .glass-card {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    /* Depth card — slightly less transparent for content areas */
+    .depth-card {
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(0, 34, 255, 0.07);
+        box-shadow: 0 4px 24px rgba(0, 34, 255, 0.06), 0 1px 4px rgba(0,0,0,0.04);
+        border-radius: 1.5rem;
+    }
+
+    /* Page canvas — diagonal gradient for full-width sections */
+    .canvas-gradient {
+        background: linear-gradient(135deg, #FFFFFF 0%, #F5F7FA 100%);
+    }
+
+    /* Electric brand blue accent line */
+    .brand-accent-line {
+        height: 3px;
+        border-radius: 9999px;
+        background: linear-gradient(90deg, #0022FF, #4FD1E8);
     }
 }
 
@@ -347,8 +383,8 @@ body {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #5B6CFF, #4FD1E8);
-    box-shadow: 0 2px 8px rgba(91, 108, 255, 0.4);
+    background: linear-gradient(135deg, #0022FF, #4FD1E8);
+    box-shadow: 0 2px 8px rgba(0, 34, 255, 0.4);
     cursor: pointer;
     border: 3px solid white;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -356,14 +392,14 @@ body {
 
 .calc-slider::-webkit-slider-thumb:hover {
     transform: scale(1.2);
-    box-shadow: 0 4px 14px rgba(91, 108, 255, 0.5);
+    box-shadow: 0 4px 14px rgba(0, 34, 255, 0.5);
 }
 
 .calc-slider::-moz-range-thumb {
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #5B6CFF, #4FD1E8);
+    background: linear-gradient(135deg, #0022FF, #4FD1E8);
     border: 3px solid white;
     cursor: pointer;
 }
