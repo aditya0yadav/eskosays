@@ -533,3 +533,53 @@ body {
     border-top: 1px solid #e2e8f0;
     margin: 2em 0;
 }
+
+/* Horizontal Ticker Marquee Animations */
+@keyframes marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.animate-marquee-left {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    animation: marquee-left 50s linear infinite;
+}
+
+.animate-marquee-right {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    animation: marquee-right 50s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+    animation-play-state: paused;
+}
+
+/* 3D Perspective Grid Floor */
+.perspective-grid {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    height: 320px;
+    background-image: 
+        linear-gradient(rgba(0, 34, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 34, 255, 0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(600px) rotateX(65deg);
+    transform-origin: bottom;
+    mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent);
+    -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), transparent);
+    opacity: 0.85;
+    z-index: 1;
+    pointer-events: none;
+}
